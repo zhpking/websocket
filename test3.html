@@ -1,0 +1,23 @@
+<html>
+</html>
+<script type="text/javascript" src="./jquery-2.2.1.min.js"></script>
+<script>
+	//var json = {'u_id':4,'v_id':1,'u_name':'test3'};
+	var json = "u_id:4,v_id:1,u_name:test3";
+	// 假设服务端ip为127.0.0.1
+	ws = new WebSocket("ws://127.0.0.1:2346");
+	ws.onopen = function() {
+		alert("连接成功");
+		ws.send(json);
+		//alert("给服务端发送一个字符串：tom");
+	};
+	//websocket.onclose = function(evt) { 
+        //alert('关闭连接');
+    //}; 
+	ws.onmessage = function(e) {
+		alert("收到服务端的消息：" + e.data);
+	};
+	//ws.onerror = function(evt) { 
+        //alert('错误') 
+   // };
+</script>

@@ -1,0 +1,12 @@
+2017-04-27 18:08:04 exception 'Exception' with message 'Serialization of 'Closure' is not allowed' in D:\WWW\sockets\start.php:263
+Stack trace:
+#0 D:\WWW\sockets\start.php(263): serialize(Object(Workerman\Connection\TcpConnection))
+#1 [internal function]: {closure}(Object(Workerman\Connection\TcpConnection), 'u_id:1,v_id:1,u...')
+#2 D:\WWW\sockets\workerman\Connection\TcpConnection.php(480): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'u_id:1,v_id:1,u...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #21)
+#4 D:\WWW\sockets\workerman\Events\Select.php(257): call_user_func_array(Array, Array)
+#5 D:\WWW\sockets\workerman\Worker.php(808): Workerman\Events\Select->loop()
+#6 D:\WWW\sockets\workerman\Worker.php(457): Workerman\Worker->run()
+#7 D:\WWW\sockets\workerman\Worker.php(366): Workerman\Worker::runAllWorkers()
+#8 D:\WWW\sockets\start.php(290): Workerman\Worker::runAll()
+#9 {main}
