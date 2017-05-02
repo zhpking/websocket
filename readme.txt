@@ -1,0 +1,1 @@
+此workerman的环境是window，需要linux版本的请到官网http://www.workerman.net/download下载,而test1test2,test3是模拟多用户而建立的测试文件
